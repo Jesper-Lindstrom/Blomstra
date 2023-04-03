@@ -1,4 +1,6 @@
-import { Box } from "@mui/material";
+import { ShoppingCart as ShoppingCartIcon } from "@mui/icons-material";
+import { Box, IconButton } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   let logo = "../../images/Logo+Background.png";
@@ -22,10 +24,11 @@ export default function Header() {
       <Box
         sx={{
           display: "flex",
-          width: "100%",
+          height: "5rem",
           gap: "2rem",
           fontSize: "25px",
           justifyContent: "flex-end",
+          alignItems: "center",
           marginLeft: "auto",
           fontFamily: "merriweather",
         }}
@@ -34,8 +37,16 @@ export default function Header() {
         <h6>Skötselråd</h6>
         <h6>Kassa</h6>
         <h6>Kontakta oss</h6>
-        <Box sx={{ marginRight: "1rem" }}>
-          <h5>K</h5>
+        <Box
+          sx={{
+            marginRight: "1rem",
+          }}
+        >
+          <NavLink to="./checkout">
+            <IconButton aria-label="cart" color="secondary">
+              <ShoppingCartIcon />
+            </IconButton>
+          </NavLink>
         </Box>
       </Box>
     </Box>
