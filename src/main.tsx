@@ -8,6 +8,10 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import "./index.css";
+import CareInstructions from "./pages/CareInstructions";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
+import Contact from "./pages/contact";
 import ProductInfo from "./pages/ProductInfo";
 import Products from "./pages/Products";
 
@@ -16,6 +20,11 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route index element={<Products />} />
       <Route path="product/:id" element={<ProductInfo />} />
+      <Route path="checkout" element={<Checkout />} />
+      <Route path="products" element={<Products />} />
+      <Route path="cart" element={<Cart />} />
+      <Route path="careinstructions" element={<CareInstructions />} />
+      <Route path="contact" element={<Contact />} />
     </Route>
   )
 );

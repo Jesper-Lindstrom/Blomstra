@@ -33,10 +33,10 @@ export default function Header() {
           fontFamily: "merriweather",
         }}
       >
-        <h6>Produkter</h6>
-        <h6>Skötselråd</h6>
-        <h6>Kassa</h6>
-        <h6>Kontakta oss</h6>
+        <NavLink to="./products">Produkter</NavLink>
+        <NavLink to="./careinstructions">Skötselråd</NavLink>
+        <NavLink to="./checkout">Kassa</NavLink>
+        <NavLink to="/contact">Kontakta oss</NavLink>
         <Box
           sx={{
             marginRight: "1rem",
